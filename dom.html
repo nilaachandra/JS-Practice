@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object model</title>
+</head>
+
+<body>
+    <p>Follow @nilaaacodes on Twitter</p>
+    <button onclick="follow();" class="js-follow-button">
+        Follow
+    </button>
+    <p>Shipping calculator</p>
+    <p>orders under $40 = +$10 shipping</p>
+    <p>Order above $40 = $0 - Free Shipping</p>
+    <input type="text" placeholder="Cost of order" class="js-cost-input" onkeydown="handleCostKeydown(event);">
+    <button onclick="
+        calculateTotal();
+    ">Calculate</button>
+    <p class="js-result">$0</p>
+    <script>
+        function handleCostKeydown(event) {
+            if(event.key === 'Enter') {
+                calculateTotal();
+            }
+        }
+
+
+        function calculateTotal() {
+            const inputElement = document.querySelector('.js-cost-input');
+            let cost = Number(inputElement.value);
+
+            if (cost < 40) {
+                cost = cost + 10;
+            }
+
+            document.querySelector('.js-result').innerHTML = `$${cost}`;
+        }
+        function follow() {
+            const buttonElement = document.querySelector('.js-follow-button');
+
+            if (buttonElement.innerText === 'Follow') { //you can also use innerHTML but if there are spaces then it will show up on the body
+                buttonElement.innerHTML = 'Followed';
+            }
+            else {
+                buttonElement.innerHTML = 'Follow';
+            }
+        }
+    </script>
+</body>
+
+</html>
