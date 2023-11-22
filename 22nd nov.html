@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom- 22nd nov practice</title>
+</head>
+
+<body>
+    <p>What is you name?</p>
+    <input type="text" class="js-input" onkeydown="handleEnterKey(event)">
+    <button class="js-button" onclick="showName();">submit</button>
+    <p class="js-answer"></p>
+    <script>
+        //function to show the name when we click on the submit button
+        function showName() {
+            const inputElement = document.querySelector('.js-input');
+            let yourName = inputElement.value;
+            document.querySelector('.js-answer').innerHTML = `Welcome to the page ${yourName}`;
+
+            // for button to change to submitted when clicked
+            const buttonElement = document.querySelector('.js-button');
+            if (buttonElement.innerText === 'submit'); {
+                buttonElement.innerHTML = 'submitted';
+            }
+        }
+
+        // function to execute the above defined function when we hit Enter Key
+        function handleEnterKey(event) {
+            if (event.key === 'Enter') {
+                showName();
+            }
+        }
+    </script>
+</body>
+
+</html>
