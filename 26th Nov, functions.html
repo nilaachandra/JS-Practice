@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funcitons</title>
+  </head>
+
+  <body>
+    <script>
+      //create a function that takes a keyword and returns the number of vowels present in the keyword
+      function countVowels(str) {
+        let count = 0;
+        for (const char of str) {
+          if (
+            char === "a" ||
+            char === "e" ||
+            char === "i" ||
+            char === "o" ||
+            char === "u"
+          ) {
+            count++;
+          }
+        }
+        console.log(count);
+      }
+
+      //using arrow function
+      const arrowOfCountVowels = (str) => {
+        let count = 0;
+        for (const char of str) {
+          if (
+            char === "a" ||
+            char === "e" ||
+            char === "i" ||
+            char === "o" ||
+            char === "u"
+          ) {
+            count++;
+          }
+        }
+        console.log(count);
+      };
+      //for each given array of number print the square of each number using the forEach loop
+
+      let arr = [1, 2, 3, 4, 5];
+      arr.forEach((val) => {
+        console.log(val * val);
+      });
+    </script>
+  </body>
+</html>
