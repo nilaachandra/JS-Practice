@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle Dark-Mode Light mode</title>
+    <style>
+      .dark {
+        background-color: black;
+        color: white;
+      }
+      .light {
+        background-color: white;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="mode">Light</button>
+    <p>Welcome to my website</p>
+    <p class="toggle-mode"></p>
+    <script>
+      let modeBtn = document.querySelector("#mode");
+      let currMode = "Light";
+      let body = document.querySelector("body");
+
+      modeBtn.addEventListener("click", () => {
+        if (currMode === "Light") {
+          currMode = "Dark";
+          body.classList.add("dark");
+          body.classList.remove("light");
+          document.querySelector("#mode").innerHTML = "Dark";
+          document.querySelector(".toggle-mode").innerHTML =
+            "You are in Dark Mode";
+        } else {
+          currMode = "Light";
+          body.classList.add("light");
+          body.classList.remove("dark");
+          document.querySelector("#mode").innerHTML = "Light";
+          document.querySelector(".toggle-mode").innerHTML =
+            "You are in Light Mode";
+        }
+      });
+    </script>
+  </body>
+</html>
