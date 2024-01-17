@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision</title>
+    Welcome to the revision
+</head>
+
+<body>
+    <script>
+        const user = {
+            name: "Nilaa",
+            age: "23",
+            location: "Silchar",
+            email: "nilalaishram@gmail.com",
+            isLoggedIn: false,
+            lastLoggedIn: ['Monday','Tuesday']
+        }
+
+        console.log(user.name)
+        console.log(user["email"])
+        user.email = "nilalaishram2@gmail.com" //to overwrite a value do this
+        console.log(user)
+        
+        Object.freeze(user) //this will freeze the object meaning you wont be able to change the object anymore
+    </script>
+</body>
+
+</html>
