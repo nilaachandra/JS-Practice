@@ -25,6 +25,29 @@
         console.log(user)
         
         Object.freeze(user) //this will freeze the object meaning you wont be able to change the object anymore
+
+        //using constructor method
+        const xUser = {}
+        xUser.id = "XAE123"
+        xUser.name = "Nilaa"
+        xUser.isLoggedIn = false
+        console.log(xUser);
+        
+        //nested objects
+        const nestedUser = {
+            id: "ABC123",
+            email: "nilalaishram@gmail.com",
+            fullName: {
+                userFullName: {
+                    firstName: "Nilaa",
+                    lastName: "Laishram"
+                }
+            }
+        }
+        console.log(nestedUser)
+       
+
+
     </script>
 </body>
 
