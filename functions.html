@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revisions</title>
 </head>
+
 <body>
     <script>
         console.log('Functions');
@@ -14,23 +16,35 @@
         }
         myFunc()
 
-        function addTwoNum(num1,num2) { //num1 and num2 are parameters when the func is being constructed
-            console.log(num1+num2)           
+        function addTwoNum(num1, num2) { //num1 and num2 are parameters when the func is being constructed
+            console.log(num1 + num2)
         }
-        
-        addTwoNum(3,4) //num1 and num2 are called arguments when the func is being executed
 
-        function addTwoNum2(a,b) {
+        addTwoNum(3, 4) //num1 and num2 are called arguments when the func is being executed
+
+        function addTwoNum2(a, b) {
             return a + b; //proper way to define a func*
 
         }
-        result = addTwoNum2(3,5)
+        result = addTwoNum2(3, 5)
         console.log(result)
 
+        //some more funcitons
+        const calculateCartPrice = (...num) => {
+            return num
+        }
+        console.log(calculateCartPrice(200, 300, 400, 500, 6000))
 
-
+        const user = {
+            userName: "nila",
+            email: "nilalaishram@gmail.com"
+        }
+        const handleObject = (anyObject) => {
+            console.log(`username is ${anyObject.userName} and the emain is ${anyObject.email}`)
+        }
+        handleObject(user)
         
-
     </script>
 </body>
+
 </html>
