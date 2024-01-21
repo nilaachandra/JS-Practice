@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision</title>
+</head>
+<body>
+    <script>
+        //this keyword makes a current context under this scope below and it works only inside an object
+        const user = {
+            userName: "NIla",
+            isLoggedIn: true,
+            email: "nilalaishram@gmail.com",
+            welcomeMsg: function() {
+                console.log(`${this.userName}, Welcome to your profile.`)
+            }
+        }
+
+        user.welcomeMsg()
+
+        //arrow function
+        const addTwoNum = (a,b) => { //if you use curly braces we need to use return keyword
+           return  a + b //this is called explicit retrun
+        }
+        console.log(addTwoNum(5,4))
+
+        // you can also write arrow function as follows, and it is called implicit return
+        const addTwoNum2 = (a,b) => a + b;
+        console.log(addTwoNum2(3,4))
+
+        // you can also write it like this, this is used in React the most, again you dont need to use return keyword
+        const addTwoNum3 = (a,b) => ( a + b )
+        console.log(addTwoNum3(7,8))
+
+        // you can also return objects inside an arrow function in this way
+        const myObject = () => 
+        (
+            {
+                userID: "ABC123",
+                userPW: "XYZ",
+            }
+            
+        )
+        
+        console.log(myObject())
+
+    </script>
+</body>
+</html>
