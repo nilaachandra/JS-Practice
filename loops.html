@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisions</title>
+</head>
+<body>
+    <script>
+        //for loop
+        for (let i=0; i < 10; i++) {
+            const element = i
+            console.log(element)
+        }
+
+        //table in javascript
+        const num = 5;
+        for(let i = 1; i <= 10; i++) {
+            const table = num * i;
+            console.log(`${num} X ${i} = ${table}`) 
+        }
+        
+        //looping values throug an array
+        let array = ['Ironman', 'Thor', 'CaptainAmerica']
+        for(let i = 0; i < array.length; i++) {
+            const loopedArray = array[i]
+            console.log(loopedArray)
+        }
+
+        //finding sum of an array
+        let arrayToCalculate = [1,3,5,7]
+        let sum = 0;
+        for(let i=0; i<arrayToCalculate.length; i++) {
+            sum += arrayToCalculate[i];
+            console.log(sum)
+        } 
+
+        //break and continue loop
+        for(let i=1; i<=10; i++) {
+            if (i == 5) {
+                console.log('Detected 5')
+                break
+            }
+            console.log(`The value of i is ${i}`)
+        }
+        
+    </script>
+</body>
+</html>
