@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revision</title>
+  </head>
+
+  <body>
+    <script>
+      const books = [
+        {
+          title: "Book 1",
+          genre: "Fantasy",
+          firstPublish: 1992,
+        },
+        {
+          title: "Book 2",
+          genre: "Adventure",
+          firstPublish: 2005,
+        },
+        {
+          title: "Book 3",
+          genre: "Thriller",
+          firstPublish: 1987,
+        },
+        {
+          title: "Book 4",
+          genre: "Romance",
+          firstPublish: 2010,
+        },
+        {
+          title: "Book 5",
+          genre: "Fantasy",
+          firstPublish: 1998,
+        },
+        {
+          title: "Book 6",
+          genre: "Adventure",
+          firstPublish: 2015,
+        },
+        {
+          title: "Book 7",
+          genre: "Romance",
+          firstPublish: 2020,
+        },
+        {
+          title: "Book 8",
+          genre: "Adventure",
+          firstPublish: 2002,
+        },
+        {
+          title: "Book 9",
+          genre: "Thriller",
+          firstPublish: 1985,
+        },
+        {
+          title: "Book 10",
+          genre: "Romance",
+          firstPublish: 1996,
+        },
+      ];
+
+      //filter
+      const booksGenre = books.filter((book) => book.genre === "Thriller");
+      console.log(booksGenre) //this will return an array of books having Thriller as genre
+
+      const booksYear = books.filter( (book) => { return book.firstPublish >=2000})
+      console.log(booksYear)
+
+      //map
+      const myNums = [1,2,3,4,5,6,7,8,9,19]
+      const newNums = myNums.map( (num) => {return num + 5})
+      console.log(newNums)
+
+      //reduce
+      const myTotal = myNums.reduce( (accumulator, currentValue) => {
+        console.log(`acc = ${accumulator} and currVal = ${currentValue}`)
+        return accumulator + currentValue
+      },0)
+      console.log(myTotal)
+      //some more examples
+      const shoppingCart = [
+        {
+            itemName: "Kim by Rudyard Kipling",
+            price: 299
+        },
+        {
+            itemName: "Google Pixel 8",
+            price: 39999
+        },
+
+        {
+            itemName: "Nothing Phone 2",
+            price: 34999
+        },
+
+        {
+            itemName: "Keychain",
+            price: 299
+        },
+
+        {
+            itemName: "Real Madrid Jersey",
+            price: 1299
+        },
+      ]
+      const cartTotal = shoppingCart.reduce((acc, item) => acc + item.price, 0);
+      console.log(cartTotal)
+    </script>
+  </body>
+</html>
