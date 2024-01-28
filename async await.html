@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      //async and await
+      async function getData() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve(455);
+            console.log("Checked");
+          }, 5500);
+        });
+      }
+
+      async function fetching() {
+        console.log("Loading MOdules");
+        console.log("doing something else");
+        console.log("Load Data");
+        let data = await getData(); //using await the below code will be executed later
+        console.log(data);
+        console.log("processing");
+        console.log("task 2 on the way");
+      }
+      fetching();
+    </script>
+  </body>
+</html>
